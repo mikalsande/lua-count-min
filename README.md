@@ -4,6 +4,7 @@ Contains a count-min implementation written in Lua. It has the following propert
 * pseudorandomized hash seeds every time the filters are reset
 * configurable additive factor for accumulated error per added item (epsilon) and probability of estimating counts outside of the accumulated error (delta).
 * use one combined array instead of two dimensional array, keeps all numbers in one contiguous space in memory.
+* use conservative update to lessen the accuracy impact of collisions
 
 ## Getting Started
 New sketches are created with the new() method. Give it the additive factor for accumulated error per added item and the accepted error rate for estimating counts outside the bounds of the accumulated error.
