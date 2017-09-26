@@ -8,17 +8,17 @@ Contains a count-min implementation written in Lua. It has the following propert
 ## Getting Started
 New sketches are created with the new() method. Give it the additive factor for accumulated error per added item and the accepted error rate for estimating counts outside the bounds of the accumulated error.
 ```
-local countmin = require("bloom")
+local countmin = require("countmin")
 
 counter = countmin.new(1 / 10000, 0.0001)
 
-a = filter.add('string')
-b = filter.add('string')
-c = filter.check('string')
+a = counter.add('string')
+b = counter.add('string')
+c = counter.check('string')
 
-print(a .. ' ' .. b .. ' ' .. c)
+print(a, b, c)
 ```
-Should print out '1 2 2'.
+Should print out '1	2	2'.
 
 ### Dependencies
 The sketch is dependent [lua-xxhash](https://github.com/mah0x211/lua-xxhash). Which can be instlled with LuaRocks.
