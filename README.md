@@ -22,11 +22,13 @@ print(a, b, c)
 Should print out '1	2	2'.
 
 ### API
-Module API
+
+#### Module API
 `new(epsilon, delta)` Returns a new instance of a Count-Min Sketch.
 
-Instance API
+#### Instance API
 `add(item)` Add a new item to the sketch. Returns the updated count for the item.
+
 `check(item)` Returns the updated count for the item.
 
 ### Dependencies
